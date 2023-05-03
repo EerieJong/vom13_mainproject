@@ -136,3 +136,15 @@ btns.forEach((btn, idx) => {
     activeTabs(idx);
   });
 });
+
+// Direct Gallery Text Effect
+const dgLetters = document.querySelectorAll('.direct-gallery-inside span')
+// console.log(dgLetters);
+dgLetters.forEach((lt, i) => {
+  const delayIndex = i + 8;
+  if(delayIndex <10){
+lt.style.animationDelay = `0.${delayIndex}s`;
+}else{
+lt.style.animationDelay = `${delayIndex / 10}s`;
+}
+})
