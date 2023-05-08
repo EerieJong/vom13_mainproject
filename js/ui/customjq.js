@@ -9,6 +9,7 @@ $(function () {
 
   // 메인 랜딩 슬라이더
   /*===== VISUAL SLIDER FUNCTION ===== */
+
   function visualSlider() {
     var visualSlider = new Swiper(".landing-slider", {
       loop: true,
@@ -71,7 +72,10 @@ $(function () {
       $(".landing-slider").removeClass("load-init");
     });
   }
-  visualSlider();
+  const isSwiper = $(".swiper-wrapper");
+  if (isSwiper.length > 0) {
+    visualSlider();
+  }
 
   /*-------- FITTING MD PICK IMAGE RATIO --------*/
   function fit2ImageRatio(el1, el2, elv1, elv2) {
@@ -106,36 +110,32 @@ $(function () {
 
   /*-------- FITTING NEW ART IMAGE RATIO --------*/
   function fit1ImageRatio(el1, elv1) {
-    const newElmtWidth = $(el1).width();
-    $(el1).height(newElmtWidth * elv1);
+    const fitElmtWidth = $(el1).width();
+    $(el1).height(fitElmtWidth * elv1);
   }
 
-  // const newArtWidth = $('.new-art-image').width();
-  // $('.new-art-image').height(newArtWidth * 1.4);
-  fit1ImageRatio('.new-art-image', 1.4);
-  $(window).on('resize', function(){
-    // const newArtWidth = $('.new-art-image').width();
-    // $('.new-art-image').height(newArtWidth * 1.4);
-    fit1ImageRatio('.new-art-image', 1.4);
+  fit1ImageRatio(".new-art-image", 1.4);
+  $(window).on("resize", function () {
+    fit1ImageRatio(".new-art-image", 1.4);
   });
 
   /*-------- FITTING REVIEW IMAGE RATIO --------*/
-  fit1ImageRatio('.review-image', 0.8);
-  $(window).on('resize', function(){
-    fit1ImageRatio('.review-image', 0.8);
+  fit1ImageRatio(".review-image", 0.8);
+  $(window).on("resize", function () {
+    fit1ImageRatio(".review-image", 0.8);
   });
 
   /*-------- GO TO TOP --------*/
-  $(window).on('scroll', function(){
+  $(window).on("scroll", function () {
     const sct = $(window).scrollTop();
-    if(sct > 100){
-      $('.to-top').css('display', 'flex');
-    } else{
-      $('.to-top').css('display', 'none');
+    if (sct > 100) {
+      $(".to-top").css("display", "flex");
+    } else {
+      $(".to-top").css("display", "none");
     }
   });
 
-  $('.to-top').on('click', function(){
-    $('html,body').animate({ scrollTop: 0}, 'fast');
+  $(".to-top").on("click", function () {
+    $("html,body").animate({ scrollTop: 0 }, "fast");
   });
 });
