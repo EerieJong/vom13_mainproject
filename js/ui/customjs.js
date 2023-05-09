@@ -49,7 +49,7 @@ setTimeout(() => {
       document.body.style.overflow = "auto";
     }
   });
-}, 100);
+}, 300);
 
 /*-------- BEST ITEMS SLIDE --------*/
 const isSwiper = document.querySelectorAll(".swiper-wrapper");
@@ -111,7 +111,7 @@ if (isSwiper.length > 0) {
   });
 }
 
-/*-------- MD PICK TBAS --------*/
+/*-------- MD PICK TABS --------*/
 // 1. 요소 선택
 const btns = document.querySelectorAll(".pick-tab-btn");
 const panels = document.querySelectorAll(".pick-tab-panel");
