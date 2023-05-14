@@ -49,7 +49,7 @@ setTimeout(() => {
       document.body.style.overflow = "auto";
     }
   });
-}, 300);
+}, 500);
 
 /*-------- BEST ITEMS SLIDE --------*/
 const isSwiper = document.querySelectorAll(".swiper-wrapper");
@@ -60,8 +60,9 @@ if (isSwiper.length > 0) {
 
     // If we need pagination
     pagination: {
-      el: ".swiper-pagination",
+      el: ".best-swiper-pagination",
       clickable: true,
+      type: "bullets",
     },
     breakpoints: {
       480: {
@@ -91,7 +92,7 @@ if (isSwiper.length > 0) {
       prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".new-swiper-pagination",
       clickable: true,
     },
     breakpoints: {
@@ -111,7 +112,7 @@ if (isSwiper.length > 0) {
   });
 }
 
-/*-------- MD PICK TABS --------*/
+/*-------- MD PICK TBAS --------*/
 // 1. 요소 선택
 const btns = document.querySelectorAll(".pick-tab-btn");
 const panels = document.querySelectorAll(".pick-tab-panel");
