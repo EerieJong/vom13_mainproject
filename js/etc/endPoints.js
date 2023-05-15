@@ -1,7 +1,7 @@
 var endPoints = {
   register: {
-    signup:
-      "https://www.dabipyeung.com/main_project_vom13/baexang_back/register/signup",
+    signup: "http://cayc.dothome.co.kr/baexang_back/register/signup", singin:"http://cayc.dothome.co.kr/baexang_back/register/signin",
+    signout:"http://cayc.dothome.co.kr/baexang_back/register/signout",
   },
   admin: {},
   productPictures: {},

@@ -1,6 +1,6 @@
 const scriptFiles = [
-  "/main_project_vom13/baexang_front/js/etc/endPoints.js",
-  "/main_project_vom13/baexang_front/js/etc/requestMethods.js",
+  "/baexang_front/js/etc/endPoints.js",
+  "/baexang_front/js/etc/requestMethods.js",
 ];
 
 // 외부파일 읽어들이는 함수
@@ -91,10 +91,9 @@ getScripts(scriptFiles, function () {
         if (data.status) {
           const isLogin = confirm(`${data.msg}\n로그인 하시겠습니까?`);
           if (isLogin) {
-            location.href =
-              "/main_project_vom13/baexang_front/pages/sign-in.html";
+            location.href = "/baexang_front/pages/sign-in.html";
           } else {
-            location.href = "/main_project_vom13/baexang_front/index.html";
+            location.href = "/baexang_front/index.html";
           }
         } else {
           alert(data.msg);
